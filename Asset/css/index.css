@@ -1,0 +1,420 @@
+/* DEBUT partie générale ---------------------------------------------------------*/
+* {    /* RESET */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1024px;
+  min-width: 480px;     /* Taille d'écran mini visée (très petit, Iphone4 : 480x320) */
+  height: 100vh;
+  background-image: url("../img/ricardo-gomez-angel-41X6FwTwPh4-unsplash.jpg"), 
+  url("../img/kevin-canlas-cFFEeHNZEqw-unsplash.jpg");
+  background-size: 250px,cover;
+  background-position: bottom right, center;
+  background-repeat: no-repeat,repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  background-color: rgba(225, 235, 240, 0.7);
+  border-radius: 10px;
+  padding: 0px 5px 0 5px;
+}
+
+section {
+  padding: 1rem 0.5rem;
+}
+
+a:hover {      /* Mise en évidence des liens */
+  color: blue;
+  font-weight: bold;
+}
+
+:target {       /* Pour décaler les cibles sous la nav */
+  padding-top: 60px;
+  margin-top: -60px;
+}
+/* FIN partie générale */
+
+/* DEBUT header (avec logos, nav bar et bouton contact) et footer ---------------*/
+header, footer {
+  display: flex;
+  position: sticky;
+  padding: 2px 0px;
+  z-index: 1;
+  background-color: rgba(225, 235, 240,0.98);
+}
+header {
+  justify-content: center;
+  top: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+footer {
+  justify-content: start;
+  padding-left: 20px;
+  bottom: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: small;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.logo {                /* LOGOS */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1px 5px;
+  border-radius: 10px;
+  border: solid thin grey;
+  background-color: rgba(225, 235, 240);
+}
+
+.icon_size_logo {
+  width : 45px;
+  height : 45px;
+}
+
+nav ul {               /* NAV BAR */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.2rem 0.2rem;
+  gap: 0.5rem;
+  border-radius: 10px;
+  border: solid thin grey;
+  background-color: rgba(225, 235, 240);
+}
+
+.contact_button {     /* BOUTON de Contact */
+  display: flex;    /* UTILE ??? */
+  flex-direction: column;
+  border-radius: 10px;
+  background: linear-gradient(rgb(180,180,180), rgb(180,180,180));
+  padding: 2px 6px;}
+
+.contact_button:hover {     /* Animation du BOUTON de Contact */
+  background: linear-gradient(rgba(180,180,180,0.75),rgba(180,180,180,1),
+  rgba(180,180,180,0.75));
+  border: solid rgb(160,160,160);
+}
+
+.icon_contact_button {
+  height: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -2px;
+}
+
+/* Réservation pour la photo d'identité */
+/* #empty_space_photo_id {     
+  width: 80px;
+} */
+
+@media (max-width: 700px) {   /* Responsive A FAIRE */
+  /* main{
+    padding: 54px 5px 0 5px;
+  } */
+}
+
+@media (max-width: 620px) {   /* Responsive A FAIRE */
+  main{
+    padding: 42px 5px 0 5px;
+  }
+}
+
+/* FIN header (avec logos, nav bar et bouton contact) ----------------------------*/
+
+/* DEBUT Présentation ------------------------------------------------------------*/
+#info {
+  display: grid;
+  grid-template: 0px repeat(5,1fr)/ 210px 1fr 145px;
+}
+
+.logo_linkedin{
+  height: 0.85rem;
+}
+
+#photo_id {
+  position: relative;
+  width: 77px;
+  top: 0px;
+  right: -71px;
+  border-radius: 20px;
+  padding: 0px;
+  transition: transform 0.5s cubic-bezier(.22,.67,.57,.87),
+  opacity 0.5s linear;
+}
+
+#photo_id:hover {   /* Animation photo */
+  transform: rotate(360deg);
+  opacity: 0;
+}
+
+#info_presentation {
+  display: flex;
+  /* position: relative;
+  padding: 0px 40px; */
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -30px;
+  margin-bottom: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  border: solid thin grey;
+  border-left: solid 5px grey;
+  border-right: solid 5px grey;
+  padding: 5px;
+  font-size: 3rem;
+  color: rgb(83, 83, 83);
+}
+
+.small_screen {
+  display: none;
+}
+
+.large_screen {
+  display: block;
+}
+
+@media (max-width: 700px) {   /* Responsive A FAIRE */
+  /* #empty_space_photo_id {
+    display: none;
+  } */
+
+  #photo_id {
+    width: 53px;
+    top: 7px;
+    right: -85px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .small_screen {
+    display: block;
+  }
+
+  .large_screen {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {   /* Responsive A FAIRE */
+  .logo {
+    display: none;
+  }
+
+  #photo_id {
+    width: 50px;
+    top: 3px;
+    right: -65px;
+  }
+
+  #info {
+    grid-template-columns: 170px 1fr 115px;
+    font-size: small;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* FIN Présentation --------------------------------------------------------------*/
+
+/* Generic bloc & box ------------------------------------------------------------------*/
+.box{
+  border-style: solid;
+  border-width: thin;
+  border-color: grey;
+  border-radius: 20px;
+  background-color: rgba(245, 245, 245, 0.90);
+}
+.box_ongoing{
+  border-style: dashed;
+}
+
+.bloc{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 15px;
+}
+
+
+/* DEBUT Diplômes ------------------------------------------------------------------*/
+/* #Diplomes {
+  display: grid;
+  position: relative;
+  grid-template: 1fr/ 200px 1fr;
+} */
+
+.diplome_box{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 110px;
+  padding: 0px 20px;
+}
+
+.studi{
+  flex-flow: row wrap;
+  column-gap: 30px;
+}
+
+.poitiers{
+  gap: 10px 30px;
+}
+
+.angers{
+  gap: 10px;
+  padding: 0px 10px;
+}
+
+.logo_angers{
+  height: 75px;
+}
+/* FIN Diplômes ----------------------------------------------------------------*/
+
+/* DEBUT Expériences Dev ---------------------------------------------------------*/
+
+.exp_dev_box{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+}
+
+.exp_dev_box_title{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 84px;
+  height: 29px;
+}
+
+.exp_dev_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 84px;
+  height: 69px;
+}
+
+.logo_techno{
+  width: 50px;
+}
+.logo_java{
+  width: 60px;
+}
+.logo_sql{
+  width: 65px;
+}
+.logo_php{
+  width: 70px;
+}
+.logo_symphony{
+  width: 65px;
+}
+
+.exp_dev_box_txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: solid thin rgb(210, 210, 210);
+  width: 114px;
+  height: 99px;
+}
+
+/* FIN Expériences Dev ---------------------------------------------------------*/
+
+/* DEBUT FOOTER ------------------------------------------------------------------*/
+footer {
+
+}
+/* FIN FOOTER --------------------------------------------------------------------*/
+
+h2 {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+
+.center_txt {
+  text-align: center;
+}
+
+.right_txt {
+  text-align: right;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.small_txt{
+  font-size: small;
+}
+
+.arrow::before {
+  content: "➳";
+  position: inherit;
+}
+
+.disc {
+  list-style-type: disc;
+}
+
+.circle {
+  list-style-type: circle;
+}
+
+.contact_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* .send_button {
+}
+
+#message {
+} */
+ 
+/*_________________________________________100_caractères_________________________________________*/
