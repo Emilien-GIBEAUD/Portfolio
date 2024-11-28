@@ -38,10 +38,12 @@ a:hover {      /* Mise en évidence des liens */
   font-weight: bold;
 }
 
-:target {       /* Pour décaler les cibles sous la nav */
+       /* Pour décaler les cibles sous la nav */
+       /* A REPOSITIONNER */
+/* :target {
   padding-top: 60px;
   margin-top: -60px;
-}
+} */
 /* FIN partie générale */
 
 /* DEBUT header (avec logos, nav bar et bouton contact) et footer ---------------*/
@@ -135,7 +137,6 @@ nav ul {               /* NAV BAR */
     padding: 42px 5px 0 5px;
   }
 }
-
 /* FIN header (avec logos, nav bar et bouton contact) ----------------------------*/
 
 /* DEBUT Présentation ------------------------------------------------------------*/
@@ -240,7 +241,6 @@ h1 {
     font-size: 1.5rem;
   }
 }
-
 /* FIN Présentation --------------------------------------------------------------*/
 
 /* Generic bloc & box ------------------------------------------------------------------*/
@@ -301,7 +301,6 @@ h1 {
 /* FIN Diplômes ----------------------------------------------------------------*/
 
 /* DEBUT Expériences Dev ---------------------------------------------------------*/
-
 .exp_dev_box{
   display: flex;
   flex-flow: column wrap;
@@ -351,8 +350,71 @@ h1 {
   width: 114px;
   height: 99px;
 }
-
 /* FIN Expériences Dev ---------------------------------------------------------*/
+
+/* DEBUT Expériences Meca --------------------------------------------------------*/
+.exp_meca_box{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 120px;
+}
+
+.exp_meca_box_date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: solid thin rgb(210, 210, 210);
+  border-bottom: solid thin rgb(210, 210, 210);
+  width: 71px;
+  height: 49px;
+}
+
+.exp_meca_box_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid thin rgb(210, 210, 210);
+  width: 377px;
+  height: 49px;
+}
+
+.exp_meca_box_txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 329px;
+  height: 70px;
+}
+
+.exp_meca_logo{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 119px;
+  height: 70px;
+}
+
+.logo_company{
+  height: 30px;
+}
+.logo_java{
+  width: 60px;
+}
+.logo_sql{
+  width: 65px;
+}
+.logo_php{
+  width: 70px;
+}
+.logo_symphony{
+  width: 65px;
+}
+/* FIN Expériences Meca --------------------------------------------------------*/
+
 
 /* DEBUT FOOTER ------------------------------------------------------------------*/
 footer {
