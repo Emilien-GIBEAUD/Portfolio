@@ -15,16 +15,15 @@ body {
   max-width: 1024px;
   min-width: 480px;     /* Taille d'écran mini visée (très petit, Iphone4 : 480x320) */
   height: 100vh;
-  background-image: url("../img/ricardo-gomez-angel-41X6FwTwPh4-unsplash.jpg"), 
-  url("../img/kevin-canlas-cFFEeHNZEqw-unsplash.jpg");
-  background-size: 250px,cover;
-  background-position: bottom right, center;
-  background-repeat: no-repeat,repeat;
+  background-image: url("../img/kevin-canlas-cFFEeHNZEqw-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
-  background-color: rgba(225, 235, 240, 0.7);
+  background-color: rgba(235, 235, 235, 0.7);
   border-radius: 10px;
   padding: 0px 5px 0 5px;
 }
@@ -51,7 +50,7 @@ header, footer {
   display: flex;
   position: sticky;
   padding: 2px 0px;
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(225, 235, 240,0.98);
 }
 header {
@@ -243,6 +242,18 @@ h1 {
 }
 /* FIN Présentation --------------------------------------------------------------*/
 
+h2 {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  background-color: rgba(245, 245, 245, 0.95);
+  padding: 0.2rem;
+  border: solid thin grey;
+  border-radius: 10px;
+}
+
 /* Generic bloc & box ------------------------------------------------------------------*/
 .box{
   border-style: solid;
@@ -353,6 +364,20 @@ h1 {
 /* FIN Expériences Dev ---------------------------------------------------------*/
 
 /* DEBUT Expériences Meca --------------------------------------------------------*/
+#Exp_meca{
+  background-image: url("../img/ricardo-gomez-angel-41X6FwTwPh4-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 3px 0;
+}
+
+.filtre{
+  background-color: rgba(235, 235, 235, 0.7);
+  padding: 1rem 0.5rem;
+}
+
 .exp_meca_box{
   display: flex;
   flex-flow: row wrap;
@@ -429,18 +454,10 @@ h1 {
 
 
 /* DEBUT FOOTER ------------------------------------------------------------------*/
-footer {
+/* footer {
 
-}
+} */
 /* FIN FOOTER --------------------------------------------------------------------*/
-
-h2 {
-  display: flex;
-  justify-content: center;
-  width: fit-content;
-  margin-left: 60px;
-  margin-bottom: 10px;
-}
 
 .center_txt {
   text-align: center;
