@@ -40,10 +40,10 @@ a:hover {      /* Mise en évidence des liens */
 
        /* Pour décaler les cibles sous la nav */
        /* A REPOSITIONNER */
-/* :target {
-  padding-top: 60px;
-  margin-top: -60px;
-} */
+:target {
+  padding-top: 62px;
+  margin-top: -62px;
+}
 /* FIN partie générale */
 
 /* DEBUT header (avec logos, nav bar et bouton contact) et footer ---------------*/
@@ -401,17 +401,29 @@ h1 {
 .logo_company{
   height: 30px;
 }
-.logo_java{
-  width: 60px;
+.logo_pg{
+  width: 100px;
 }
-.logo_sql{
-  width: 65px;
+.logo_technip{
+  height: 25px;
 }
-.logo_php{
-  width: 70px;
+.logo_velan{
+  width: 75px;
 }
-.logo_symphony{
-  width: 65px;
+.logo_imeca{
+  height: 40px;
+}
+.logo_pharea{
+  width: 90px;
+}
+.logo_pharea_big{
+  width: 110px;
+}
+.logo_iter{
+  height: 40px;
+}
+.logo_efinor{
+  width: 100px;
 }
 /* FIN Expériences Meca --------------------------------------------------------*/
 
