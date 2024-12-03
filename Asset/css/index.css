@@ -139,6 +139,18 @@ nav ul {               /* NAV BAR */
 /* FIN header (avec logos, nav bar et bouton contact) ----------------------------*/
 
 /* DEBUT Présentation ------------------------------------------------------------*/
+.prez {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.border {
+  border: solid grey;
+  /* margin-left: 0;
+  margin-right: 0; */
+  width: fit-content;
+}
+
 #info {
   display: grid;
   grid-template: 0px repeat(5,1fr)/ 210px 1fr 145px;
@@ -151,8 +163,8 @@ nav ul {               /* NAV BAR */
 #photo_id {
   position: relative;
   width: 77px;
-  top: 0px;
-  right: -71px;
+  /* top: 0px;
+  right: -71px; */
   border-radius: 20px;
   padding: 0px;
   transition: transform 0.5s cubic-bezier(.22,.67,.57,.87),
@@ -166,17 +178,35 @@ nav ul {               /* NAV BAR */
 
 #info_presentation {
   display: flex;
+  width: 500px;
   /* position: relative;
   padding: 0px 40px; */
 }
 
-h1 {
+/* h1 {
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: -30px;
   margin-bottom: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  border: solid thin grey;
+  border-left: solid 5px grey;
+  border-right: solid 5px grey;
+  padding: 5px;
+  font-size: 3rem;
+  color: rgb(83, 83, 83);
+} */
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   width: fit-content;
   border-radius: 10px;
   border: solid thin grey;
