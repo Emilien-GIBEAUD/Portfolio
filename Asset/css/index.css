@@ -23,13 +23,28 @@ body {
 }
 
 main {
-  background-color: rgba(235, 235, 235, 0.7);
+  background-color: rgba(245, 245, 245, 0.7);
   border-radius: 10px;
   padding: 0px 5px 0 5px;
 }
 
 section {
   padding: 1rem 0.5rem;
+}
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: rgba(245, 245, 245, 0.90);
+  border-radius: 10px;
+  border: solid thin grey;
+  border-left: solid 5px grey;
+  border-right: solid 5px grey;
+  padding: 5px;
+  font-size: 3rem;
+  color: rgb(50, 50, 50);
 }
 
 a:hover {      /* Mise en évidence des liens */
@@ -120,11 +135,6 @@ nav ul {               /* NAV BAR */
   margin-bottom: -2px;
 }
 
-/* Réservation pour la photo d'identité */
-/* #empty_space_photo_id {     
-  width: 80px;
-} */
-
 @media (max-width: 700px) {   /* Responsive A FAIRE */
   /* main{
     padding: 54px 5px 0 5px;
@@ -139,26 +149,44 @@ nav ul {               /* NAV BAR */
 /* FIN header (avec logos, nav bar et bouton contact) ----------------------------*/
 
 /* DEBUT Présentation ------------------------------------------------------------*/
-#info {
-  display: grid;
-  grid-template: 0px repeat(5,1fr)/ 210px 1fr 145px;
+#Presentation {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  background-image: url("../img/saint_simind.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* #Exp_meca{
+  padding: 0;
+  margin: 3px 0;
+} */
+
+.white_bg {
+  background-color: rgba(245, 245, 245, 0.95);
+  border-radius: 10px;
+  padding: 8px;
+  margin: -8px;
 }
 
 .logo_linkedin{
   height: 0.85rem;
 }
 
+.for_photo_id {
+  height: 20px;
+}
 #photo_id {
   position: relative;
-  width: 77px;
-  top: 0px;
-  right: -71px;
-  border-radius: 20px;
+  width: 73px;
+  top: -24px;
+  right: -68px;
+  border-radius: 10px;
   padding: 0px;
   transition: transform 0.5s cubic-bezier(.22,.67,.57,.87),
   opacity 0.5s linear;
 }
-
 #photo_id:hover {   /* Animation photo */
   transform: rotate(360deg);
   opacity: 0;
@@ -166,25 +194,20 @@ nav ul {               /* NAV BAR */
 
 #info_presentation {
   display: flex;
-  /* position: relative;
-  padding: 0px 40px; */
-}
-
-h1 {
-  display: flex;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -30px;
-  margin-bottom: 10px;
-  width: fit-content;
+}
+.empty_space {
+  width: 213px;
+}
+.txt_presentation {
+  background-color: rgba(245, 245, 245, 0.95);
   border-radius: 10px;
-  border: solid thin grey;
-  border-left: solid 5px grey;
-  border-right: solid 5px grey;
-  padding: 5px;
-  font-size: 3rem;
-  color: rgb(83, 83, 83);
+  width: 500px;
+  padding: 8px;
+  margin: 13px 13px 0px 13px;
+}
+.empty_space_2 {
+  width: 152px;
 }
 
 .small_screen {
@@ -275,12 +298,6 @@ h2 {
 
 
 /* DEBUT Diplômes ------------------------------------------------------------------*/
-/* #Diplomes {
-  display: grid;
-  position: relative;
-  grid-template: 1fr/ 200px 1fr;
-} */
-
 .diplome_box{
   display: flex;
   flex-flow: column wrap;
