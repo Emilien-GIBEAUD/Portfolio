@@ -43,9 +43,9 @@ h1 {
   margin-bottom: auto;
   background-color: rgba(245, 245, 245, 0.90);
   border-radius: 10px;
-  border: solid thin grey;
-  border-left: solid 5px grey;
-  border-right: solid 5px grey;
+  border: solid thin rgb(85 85 85);
+  border-left: solid 5px rgb(85 85 85);
+  border-right: solid 5px rgb(85 85 85);
   padding: 5px;
   font-size: 3rem;
   color: rgb(50, 50, 50);
@@ -56,8 +56,9 @@ a:hover {      /* Mise en évidence des liens */
   font-weight: bold;
 }
 
-       /* Pour décaler les cibles sous la nav */
-       /* A REPOSITIONNER */
+/* Pour décaler les cibles sous la nav */
+/* A REPOSITIONNER SI BESOIN*/
+/* BUG A CORRIGER : mange le padding des sections au click*/
 :target {
   padding-top: 62px;
   margin-top: -62px;
