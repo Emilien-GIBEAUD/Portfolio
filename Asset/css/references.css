@@ -45,6 +45,7 @@ main {
 
 a:hover{
   color: blue;
+  font-weight: bold;
 }
 
 .bloc {
