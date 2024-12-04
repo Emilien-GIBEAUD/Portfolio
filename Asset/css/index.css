@@ -17,7 +17,6 @@ body {
   align-items: center;
   /* max-width: 1024px; */
   min-width: 480px;     /* Taille d'écran mini visée (très petit, Iphone4 : 480x320) */
-  height: 100vh;
   background-image: url("../img/kevin-canlas-cFFEeHNZEqw-unsplash.jpg");
   background-size: cover;
   background-position: center;
@@ -68,6 +67,7 @@ a:hover {      /* Mise en évidence des liens */
 /* DEBUT header (avec logos, nav bar et bouton contact) et footer ---------------*/
 header, footer {
   display: flex;
+  /* position: -webkit-sticky; */
   position: sticky;
   width: 100%;
   padding: 2px 0px;
