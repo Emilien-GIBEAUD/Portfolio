@@ -55,7 +55,7 @@ a:link, a:visited, a:hover {
   color: blue;
 }
 a:hover {
-  font-weight: bold;
+  text-decoration: underline;
 }
 
 /* Pour décaler les cibles sous la nav */
@@ -378,7 +378,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: solid thin rgb(210, 210, 210);
+  border-left: solid thin grey;
   width: 114px;
   height: 99px;
 }
@@ -412,8 +412,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: solid thin rgb(210, 210, 210);
-  border-bottom: solid thin rgb(210, 210, 210);
+  border-right: solid thin grey;
+  border-bottom: solid thin grey;
   width: 71px;
   height: 49px;
 }
@@ -422,7 +422,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: solid thin rgb(210, 210, 210);
+  border-bottom: solid thin grey;
   width: 377px;
   height: 49px;
 }
@@ -442,6 +442,29 @@ h2 {
   align-items: center;
   width: 119px;
   height: 70px;
+}
+
+.exp_meca_box_txt_efinor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 329px;
+  height: 50px;
+}
+.exp_meca_logo_efinor{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 119px;
+  height: 50px;
+}
+.exp_meca_box_txt2_efinor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 20px;
 }
 
 .logo_company{
@@ -469,7 +492,7 @@ h2 {
   height: 40px;
 }
 .logo_efinor{
-  width: 100px;
+  height: 40px;
 }
 /* FIN Expériences Meca --------------------------------------------------------*/
 

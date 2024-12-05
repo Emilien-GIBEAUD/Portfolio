@@ -47,7 +47,7 @@ a:link, a:visited, a:hover {
   color: blue;
 }
 a:hover {
-  font-weight: bold;
+  text-decoration: underline;
 }
 
 .bloc {
