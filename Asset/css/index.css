@@ -51,8 +51,10 @@ h1 {
   color: rgb(50, 50, 50);
 }
 
-a:hover {      /* Mise en évidence des liens */
+a:link, a:visited, a:hover {
   color: blue;
+}
+a:hover {
   font-weight: bold;
 }
 

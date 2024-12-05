@@ -43,8 +43,10 @@ main {
   padding: 0px 5px 0 5px; */
 }
 
-a:hover{
+a:link, a:visited, a:hover {
   color: blue;
+}
+a:hover {
   font-weight: bold;
 }
 
