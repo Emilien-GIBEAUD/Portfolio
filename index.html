@@ -11,19 +11,49 @@
 </head>
 <body>
   <header>
+    <div class="logo">
+      <img class="icon_size_logo" 
+        src="./Asset/icon/engineering.svg" 
+        alt="icône mecanicien">
+      <img class="icon_size_logo" 
+        src="./Asset/icon/arrow.svg" 
+        alt="icône flèche">
+      <img class="icon_size_logo" 
+        src="./Asset/icon/code.svg" 
+        alt="icône développeur">
+    </div>
     <nav>
-      <div class="logo">
-        <img class="icon_size_logo" 
-          src="./Asset/icon/engineering.svg" 
-          alt="icône mecanicien">
-        <img class="icon_size_logo" 
-          src="./Asset/icon/arrow.svg" 
-          alt="icône flèche">
-        <img class="icon_size_logo" 
-          src="./Asset/icon/code.svg" 
-          alt="icône développeur">
+      <label for="toggle">MENU ☰</label>
+      <input type="checkbox" id="toggle">
+      <div class="menu">
+        <a href="#Presentation" class="menu_button_border"> Présentation </a>
+        <a href="#Diplomes" class="menu_button_border"> Diplômes </a>
+
+        <div class="menu_button_border">
+          <a href="#Exp_dev" class="center_txt large_screen">
+            Expériences <br> (développeur)</a>
+          <a href="#Exp_dev" class="center_txt small_screen">
+            Expériences (dév.)</a>
+        </div>
+
+        <div class="menu_button_border">
+        <a href="#Exp_meca" class="center_txt large_screen">
+          Expériences <br> (mécanicien) </a>
+        <a href="#Exp_meca" class="center_txt small_screen">
+          Expériences (méca.) </a>
+        </div>
+        
+        <a href="#Loisirs" class="menu_button_border"> Loisirs</a>
+        <div class="button center_txt">
+          <a href="#Contact"> 
+          Contact <br>
+          <img  class="icon_contact_button" 
+                src="./Asset/icon/contact.svg" 
+                alt="icône de contact"> 
+          </a>
+        </div>
       </div>
-      <ul>
+      <!-- <ul>
         <li><a href="#Presentation"> Présentation </a></li>
         <li><a href="#Diplomes"> Diplômes </a></li>
         <li><a href="#Exp_dev"> Expériences <br> (développeur) </a></li>
@@ -38,8 +68,7 @@
               alt="icône de contact"> 
           </a>
         </li>
-      </ul>
-      <!-- <div id="empty_space_photo_id"></div> -->
+      </ul> -->
     </nav>
   </header>
   <main>
