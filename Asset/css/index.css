@@ -111,7 +111,6 @@ nav {
 }
 
 .icon_size_logo {
-  width : 45px;
   height : 45px;
 }
 
@@ -167,23 +166,18 @@ label, #toggle {
   display: block;
 }
 
-@media (max-width: 700px) {   /* Responsive A FAIRE */
-  /* main{
-    padding: 54px 5px 0 5px;
-  } */
-}
-
-@media (max-width: 620px) {   /* Responsive A FAIRE */
+@media (max-width: 740px) {   /* Responsive A FAIRE */
   header {
-    justify-content: end;
+    justify-content: space-between;
   }
 
-  .menu, .logo {
+  .icon_size_logo {
+    height : 30px;
+  }
+  
+  .menu {
     display: none;
     flex-direction: column;
-  }
-
-  .menu {
     padding: 0;
     gap: 0;
     border-radius: 10px;
@@ -194,7 +188,6 @@ label, #toggle {
   .icon_contact_button {
     display: none;
   }
-  
   .button {
     border-top-right-radius: 0;
     border-bottom-right-radius: 9px;
@@ -230,8 +223,39 @@ label, #toggle {
     flex-direction: column;
   }
 
+/* Tooltip text */
+.tooltip .tooltip_txt {
+  visibility: hidden;
+  background-color: whitesmoke;
+  font-size: small;
+  text-align: center;
+  padding: 2px 4px;
+  margin: -2px 5px;
+  border-radius: 5px;
+  border: solid thin;
+
+  /* Position the tooltip text*/
+  position: static;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltip_txt {
+    visibility: visible;
+  }
+
   main{
     padding: 42px 5px 0 5px;
+  }
+}
+
+@media (max-width: 510px) {
+  .logo {
+    display: none;
+  }
+
+  header {
+    justify-content: end;
   }
 }
 /* FIN header (avec logos, nav bar et bouton contact) ----------------------------*/
@@ -302,23 +326,34 @@ label, #toggle {
   display: block;
 } */
 
-@media (max-width: 700px) {   /* Responsive A FAIRE */
+@media (max-width: 740px) {   /* Responsive A FAIRE */
+  #Presentation {
+    font-size: small;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #photo_id {
+    width: 53px;
+    top: 0px;
+    right: -55px;
+    border-radius: 10px;
+  }
+  .white_bg {
+    padding: 4px;
+    /* margin: -8px; */
+  }
+  
+
   /* #empty_space_photo_id {
     display: none;
   } */
 
-  /* #photo_id {
-    width: 53px;
-    top: 7px;
-    right: -85px;
-    border-radius: 10px;
-  }
 
-  h1 {
-    font-size: 2.25rem;
-  }
 
-  .small_screen {
+  /* .small_screen {
     display: block;
   }
 
@@ -327,23 +362,6 @@ label, #toggle {
   } */
 }
 
-@media (max-width: 620px) {   /* Responsive A FAIRE */
-
-  /* #photo_id {
-    width: 50px;
-    top: 3px;
-    right: -65px;
-  }
-
-  #info {
-    grid-template-columns: 170px 1fr 115px;
-    font-size: small;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  } */
-}
 /* FIN Présentation --------------------------------------------------------------*/
 
 h2 {
