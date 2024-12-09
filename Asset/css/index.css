@@ -65,6 +65,12 @@ a:hover {
   padding-top: 62px;
   margin-top: -62px;
 }
+
+@media (max-width: 740px) {
+  section {
+    padding: 0.5rem 0.25rem;
+  }
+}
 /* FIN partie générale */
 
 /* DEBUT header (avec logos, nav bar et bouton contact) et footer ---------------*/
@@ -166,9 +172,10 @@ label, #toggle {
   display: block;
 }
 
-@media (max-width: 740px) {   /* Responsive A FAIRE */
+@media (max-width: 740px) {
   header {
     justify-content: space-between;
+    gap: 0;
   }
 
   .icon_size_logo {
@@ -332,7 +339,7 @@ label, #toggle {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   #photo_id {
@@ -346,6 +353,9 @@ label, #toggle {
     /* margin: -8px; */
   }
   
+  .txt_presentation {
+    width: 400px;
+  }
 
   /* #empty_space_photo_id {
     display: none;
@@ -362,6 +372,11 @@ label, #toggle {
   } */
 }
 
+@media (max-width: 510px) {
+  .txt_presentation {
+    width: 90%;
+  }
+}
 /* FIN Présentation --------------------------------------------------------------*/
 
 h2 {
@@ -373,7 +388,16 @@ h2 {
   background-color: rgba(245, 245, 245, 0.95);
   padding: 0.3rem;
   border: solid thin rgb(220 220 220);
-  border-radius: 5px;}
+  border-radius: 5px;
+}
+
+@media (max-width: 740px) {
+  h2 {
+    font-size: 1.25rem;
+    margin-left: 30px;
+    margin-bottom: 5px;
+  }
+}
 
 /* Generic bloc & box ------------------------------------------------------------------*/
 .box{
@@ -423,6 +447,13 @@ h2 {
 
 .logo_angers{
   height: 75px;
+}
+
+@media (max-width: 510px) {
+  .diplome_box{
+    font-size: small;
+  }
+  
 }
 /* FIN Diplômes ----------------------------------------------------------------*/
 
@@ -476,6 +507,14 @@ h2 {
   width: 114px;
   height: 99px;
 }
+
+@media (max-width: 510px) {
+  .exp_dev_box{
+    font-size: small;
+  }
+  
+}
+
 /* FIN Expériences Dev ---------------------------------------------------------*/
 
 /* DEBUT Expériences Meca --------------------------------------------------------*/
@@ -559,6 +598,7 @@ h2 {
   align-items: center;
   width: 450px;
   height: 20px;
+  font-size: small;
 }
 
 .logo_company{
@@ -588,6 +628,57 @@ h2 {
 .logo_efinor{
   height: 40px;
 }
+
+@media (max-width: 510px) {
+  .exp_meca_box{
+    width: 310px;
+  }
+  
+  .exp_meca_box_date{
+    width: 51px;
+    font-size: small;
+  }
+  
+  .exp_meca_box_title{
+    width: 257px;
+    font-size: small;
+  }
+  
+  .exp_meca_box_txt{
+    width: 189px;
+    font-size: small;
+  }
+  
+  .exp_meca_logo{
+    width: 119px;
+  }
+
+  .exp_meca_box_txt_efinor{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 189px;
+    height: 50px;
+    font-size: small;
+  }
+  .exp_meca_logo_efinor{
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; */
+    width: 119px;
+    height: 50px;
+  }
+  .exp_meca_box_txt2_efinor{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 310px;
+    height: 20px;
+    font-size: xx-small;
+  }
+}
+
 /* FIN Expériences Meca --------------------------------------------------------*/
 
 
