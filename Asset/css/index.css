@@ -26,11 +26,11 @@ main {
   background-color: rgba(245, 245, 245, 0.7);
   max-width: 1024px;
   border-radius: 10px;
-  padding: 0px 5px 0 5px;
+  padding: 0px 5px;
 }
 
 section {
-  padding: 1rem 0.5rem;
+  padding: 16px 8px;
 }
 
 h1 {
@@ -62,7 +62,11 @@ a:hover {
 
 @media (max-width: 740px) {
   section {
-    padding: 0.5rem 0.25rem;
+    padding: 8px 3px;
+  }
+
+  main{
+    padding: 0px 2px;
   }
 }
 /* FIN partie générale */
@@ -210,7 +214,7 @@ label, #toggle {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     cursor: pointer;
   }
 
@@ -243,13 +247,9 @@ label, #toggle {
   .tooltip:hover .tooltip_txt {
     visibility: visible;
   }
-
-  main{
-    padding: 42px 5px 0 5px;
-  }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 479px) {
   .logo {
     display: none;
   }
@@ -262,13 +262,21 @@ label, #toggle {
 
 /* DEBUT Présentation ------------------------------------------------------------*/
 #Presentation {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* justify-content: space-between;
+  flex-flow: row wrap; */
   background-image: url("../img/saint_simind.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#info_presentation {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
 
 .white_bg {
@@ -300,17 +308,14 @@ label, #toggle {
   opacity: 0;
 }
 
-#info_presentation {
-  order: 2;
+#txt_presentation {
   display: flex;
   justify-content: center;
-}
-.txt_presentation {
   background-color: rgba(245, 245, 245, 0.95);
   border-radius: 10px;
   width: 500px;
   padding: 8px;
-  margin: 13px 13px 0px 13px;
+  margin: 13px auto 0px auto;
 }
 
 @media (max-width: 740px) {   /* Responsive A FAIRE */
@@ -319,7 +324,7 @@ label, #toggle {
   }
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
 
   #photo_id {
@@ -330,28 +335,30 @@ label, #toggle {
   }
   .white_bg {
     padding: 4px;
+    margin: 2px;
   }
   
-  .txt_presentation {
+  #txt_presentation {
     width: 400px;
   }
 }
 
-@media (max-width: 510px) {
-  .txt_presentation {
+@media (max-width: 479px) {
+  #txt_presentation {
     width: 90%;
   }
 
   h1 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 460px) {
-  h1 {
+    /* font-size: 1.25rem; */
     order: 1;
   }
 }
+
+/* @media (max-width: 460px) {
+  h1 {
+    order: 1;
+  }
+} */
 
 /* FIN Présentation --------------------------------------------------------------*/
 
@@ -375,7 +382,7 @@ h2 {
   }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 479px) {
   h2 {
     font-size: 1rem;
   }
@@ -431,7 +438,7 @@ h2 {
   height: 75px;
 }
 
-@media (max-width: 510px) {
+@media (max-width: 479px) {
   .diplome_box{
     font-size: small;
   }
@@ -490,7 +497,7 @@ h2 {
   height: 99px;
 }
 
-@media (max-width: 510px) {
+@media (max-width: 479px) {
   .exp_dev_box{
     font-size: small;
   }
@@ -511,7 +518,7 @@ h2 {
 
 .filtre{
   background-color: rgba(235, 235, 235, 0.7);
-  padding: 1rem 0.5rem;
+  padding: 16px 8px;
 }
 
 .exp_meca_box{
@@ -611,7 +618,13 @@ h2 {
   height: 40px;
 }
 
-@media (max-width: 510px) {
+@media (max-width: 740px) {
+  .filtre {
+    padding: 8px 3px;
+  }
+}
+
+@media (max-width: 479px) {
   .exp_meca_box{
     width: 310px;
   }
