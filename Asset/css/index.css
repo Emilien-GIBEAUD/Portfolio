@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../img/kevin-canlas-cFFEeHNZEqw-unsplash.jpg");
+  background-image: url("../img/kevin-canlas_2000Xxxx.webp");
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
@@ -267,7 +267,7 @@ label, #toggle {
   align-items: center; */
   /* justify-content: space-between;
   flex-flow: row wrap; */
-  background-image: url("../img/saint_simind.jpg");
+  background-image: url("../img/Saint_Simind_origine.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -508,7 +508,7 @@ h2 {
 
 /* DEBUT Expériences Meca --------------------------------------------------------*/
 #Exp_meca{
-  background-image: url("../img/ricardo-gomez-angel-41X6FwTwPh4-unsplash.jpg");
+  background-image: url("../img/ricardo-gomez-angel_2000Xxxx.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
