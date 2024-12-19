@@ -118,7 +118,7 @@ nav {
   height : 45px;
 }
 
-label, #toggle {
+#menu_toogle, #toggle {
   display: none;
 }
 
@@ -210,7 +210,7 @@ label, #toggle {
     display: none;
   }
   
-  label{
+  #menu_toogle{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -667,11 +667,93 @@ h2 {
 /* FIN Expériences Meca --------------------------------------------------------*/
 
 
-/* DEBUT FOOTER ------------------------------------------------------------------*/
-/* footer {
+/* DEBUT Contact ------------------------------------------------------------------*/
+fieldset {
+  padding: 10px;
+  border: solid 2px rgb(1, 78, 121);
+  border-radius: 10px;
+}
 
-} */
-/* FIN FOOTER --------------------------------------------------------------------*/
+legend {
+  padding: 5px;
+  font-size: 1.4rem;
+}
+
+label {
+
+}
+
+#message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#message textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  border: solid 1px rgb(1, 78, 121);
+  border-radius: 4px;
+}
+
+#message input:hover {
+  background-color: rgb(100, 149, 237, 0.5);
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+#message input {
+  margin: 2px 2px;
+  padding: 2px 4px;
+}
+
+.contact_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact_items p,#status_choice p {
+  margin: 2px 10px;
+  width: 85px;
+  text-align: right;
+}
+
+input {
+  margin: 2px 0px;
+  padding: 1px 2px;
+  flex-grow: 1;
+  border: solid 1px rgb(1, 78, 121);
+  border-radius: 4px;
+}
+
+#status_choice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Classes d'animations pour JS */
+.masque {
+  opacity: 0%;
+  margin-bottom: -4%;
+}
+
+.app {
+  opacity: 100%;
+  transition-duration: 0.5s;
+  margin-bottom: 0%;
+}
+
+.disp {
+  opacity: 0%;
+  transition-duration: 0.5s;
+  margin-bottom: -4%;
+}
+
+/* FIN Contact --------------------------------------------------------------------*/
 
 .center_txt {
   text-align: center;
@@ -697,7 +779,7 @@ h2 {
   font-size: small;
 }
 
-.arrow::before {
+/* .arrow::before {
   content: "➳";
   position: inherit;
 }
@@ -708,18 +790,6 @@ h2 {
 
 .circle {
   list-style-type: circle;
-}
-
-.contact_items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-/* .send_button {
-}
-
-#message {
 } */
 
 /*_________________________________________100_caractères_________________________________________*/
