@@ -759,6 +759,24 @@ input {
   margin-bottom: -30px; /* -4% */
 }
 
+@media (max-width: 479px) {
+  #Contact {
+    font-size: small;
+  }
+  
+  #Contact legend {
+    font-size: 1rem;
+  }
+
+  fieldset {
+    padding: 3px;
+  }
+
+  .contact_items p,#status_choice p {
+    margin: 2px 3px;
+    width: 67px;
+  }
+}
 /* FIN Contact --------------------------------------------------------------------*/
 
 .center_txt {
