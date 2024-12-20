@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Emilien GIBEAUD">
   <meta name="description" content="Mon portfolio (actualisé en décembre 2024).">
-  <link rel="preload" href="./Asset/img/Saint_Simind_origine.webp" as="image"><!--  fetchpriority="high" -->
-  <link rel="preload" href="./Asset/img/kevin-canlas_2000Xxxx.webp" as="image"><!--  fetchpriority="high" -->
-  <link rel="preload" href="./Asset/img/ricardo-gomez-angel_2000Xxxx.webp" as="image"><!--  fetchpriority="high" -->
+
+  <!-- <link rel="preload" href="./Asset/img/Saint_Simind_origine.webp" as="image">
+   <link rel="preload" href="./Asset/img/kevin-canlas_2000Xxxx.webp" as="image">
+  <link rel="preload" href="./Asset/img/ricardo-gomez-angel_2000Xxxx.webp" as="image"> -->
+  <!--  fetchpriority="high" -->
+  
   <link rel="stylesheet" href="./Asset/css/index.css">
   <link rel="shortcut icon" href="./Asset/img/Identité.png" type="image/x-icon">
+
+  <script src="./Asset/js/evenements.js" type="module" defer></script>
+
   <title>Portfolio Emilien GIBEAUD</title>
 </head>
 <!--_______________________________________100_caractères________________________________________-->
@@ -508,7 +514,7 @@
     <section id="Contact">
       <h2>Contact</h2>
       <div>
-        <form action="" method="get">
+        <form id="formulaire">
           <fieldset>
             <legend>Votre message</legend>
             <div id="message">
@@ -555,7 +561,7 @@
 
             <div class="contact_items">
               <label for="company"><p>Entreprise :</p></label>
-              <input  id="company" type="text" name="entrprise" 
+              <input  id="company" type="text" name="entreprise" 
                       placeholder="Saisissez le nom de votre entreprise" required="required">
             </div>
             
@@ -573,8 +579,6 @@
         title="Page présentant les références"> cette page</a>.
     </p>
   </footer>
-
-  <script src="./Asset/js/evenements.js" type="module"></script>
 
 </body>
 </html>
