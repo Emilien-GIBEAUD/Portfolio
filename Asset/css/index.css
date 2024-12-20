@@ -775,7 +775,13 @@ input {
     width: 67px;
   }
 
-  .disp {
+  .masque {
+    margin-bottom: -25px;
+  }
+  .app {
+    margin-bottom: 0%;
+  }
+    .disp {
     margin-bottom: -25px;
   }
 }
