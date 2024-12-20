@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Emilien GIBEAUD">
   <meta name="description" content="Mon portfolio (actualisé en décembre 2024).">
-  <link rel="preload" href="./Asset/img/Saint_Simind_origine.webp" as="image"><!--  fetchpriority="high" -->
-  <link rel="preload" href="./Asset/img/kevin-canlas_2000Xxxx.webp" as="image"><!--  fetchpriority="high" -->
-  <link rel="preload" href="./Asset/img/ricardo-gomez-angel_2000Xxxx.webp" as="image"><!--  fetchpriority="high" -->
+
+  <!-- <link rel="preload" href="./Asset/img/Saint_Simind_origine.webp" as="image">
+   <link rel="preload" href="./Asset/img/kevin-canlas_2000Xxxx.webp" as="image">
+  <link rel="preload" href="./Asset/img/ricardo-gomez-angel_2000Xxxx.webp" as="image"> -->
+  <!--  fetchpriority="high" -->
+  
   <link rel="stylesheet" href="./Asset/css/index.css">
   <link rel="shortcut icon" href="./Asset/img/Identité.png" type="image/x-icon">
+
+  <script src="./Asset/js/evenements.js" type="module" defer></script>
+
   <title>Portfolio Emilien GIBEAUD</title>
 </head>
+<!--_______________________________________100_caractères________________________________________-->
 <body>
   <header>
     <div class="logo">
@@ -26,7 +33,7 @@
         alt="icône développeur">
     </div>
     <nav>
-      <label for="toggle" class="tooltip">
+      <label id="menu_toogle" for="toggle" class="tooltip">
         <span class="tooltip_txt">afficher/masquer<br>le menu</span>
         MENU ☰
       </label>
@@ -113,13 +120,11 @@
         </div>
       </div>
       <div id="txt_presentation">
-        <!-- <div class="txt_presentation center_txt italic"> --> 
         <p class="center_txt italic">
           En reconversion professionnelle dans le domaine du développement informatique 
           (anciennement ingénieur mécanicien spécialisé en calcul de structures avec  
           14&nbsp;ans&nbsp;d'expérience).
         </p>
-        <!-- </div> -->
       </div>
     </section>
 
@@ -509,36 +514,66 @@
     <section id="Contact">
       <h2>Contact</h2>
       <div>
-        <form action="" method="get">
+        <form id="formulaire">
           <fieldset>
             <legend>Votre message</legend>
-            <div class="send_button">
-              <textarea 
-                id="message" 
-                name="message" 
-                placeholder="Saisissez votre message"
-                rows="4"
-                cols="20"
-                value="Saisissez votre message"
-                required="required">
-              </textarea>
-              <button><input type="submit" value="Envoyer"></button>
+            <div id="message">
+              <label for="object"><p>Objet :</p></label>
+              <input  id="object" type="text" name="objet" 
+                      placeholder="Saisissez l'objet de votre message" required="required">
+
+              <label><p>Message :</p></label>
+              <textarea name="message" placeholder="Saisissez votre message
+
+
+
+(vous pouvez étirer la zone de texte si besoin en la saisissant en bas à droite)"
+                        rows="6" required="required"></textarea>
+
+              <button>
+                <input type="submit" value="Envoyer">
+              </button>
             </div>
           </fieldset>
-          <fieldset class="contact_items">
+
+          <fieldset>
             <legend>Vos coordonnées</legend>
-            <div>
-              <label for="nom">Nom</label>
-              <input type="text" id="nom" name="nom" placeholder="Saisissez votre nom" required="required">
+            <div class="contact_items">
+              <label for="name"><p>Nom :</p></label>
+              <input  id="name" type="text" name="nom" 
+                      placeholder="Saisissez votre nom" required="required">
             </div>
-            <div>
-              <label for="prenom">Prénom</label>
-              <input type="text" id="prenom" name="prenom" placeholder="Saisissez votre prénom" required="required">
+
+            <div class="contact_items">
+              <label for="firstname"><p>Prénom :</p></label>
+              <input  id="firstname" type="text" name="prénom" 
+                      placeholder="Saisissez votre prénom" required="required">
             </div>
-            <div>
-              <label for="email">email</label>
-              <input type="email" id="email" name="email" placeholder="Saisissez votre email" required="required">
+
+            <div class="contact_items">
+              <label for="email"><p>email :</p></label>
+              <input  id="email" type="email" name="email" 
+                      placeholder="Saisissez votre email" required="required">
             </div>
+
+            <div id="status_choice">
+              <label for="status"><p>Statut :</p></label>
+              <div>
+                <input id="part" name="status" type="radio" required checked>
+                <label for="part">Particulier</label>
+              </div>
+              <div>
+                <input id="prof" name="status" type="radio" required>
+                <label for="prof">Professionnel</label>
+              </div>
+            </div>
+
+            <div class="contact_items">
+              <label for="company"><p>Entreprise :</p></label>
+              <input  id="company" type="text" name="entreprise" 
+                      placeholder="Saisissez le nom de votre entreprise" required="required">
+            </div>
+            
           </fieldset>
         </form>
       </div>
@@ -553,6 +588,7 @@
         title="Page présentant les références"> cette page</a>.
     </p>
   </footer>
+
 </body>
 </html>
 <!--_______________________________________100_caractères________________________________________-->
