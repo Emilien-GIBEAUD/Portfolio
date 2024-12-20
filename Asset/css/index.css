@@ -746,13 +746,11 @@ input {
   opacity: 0%;
   margin-bottom: -30px; /* -4% */
 }
-
 .app {
   opacity: 100%;
   transition-duration: 0.5s;
   margin-bottom: 0%;
 }
-
 .disp {
   opacity: 0%;
   transition-duration: 0.5s;
@@ -777,12 +775,9 @@ input {
     width: 67px;
   }
 
-.masque {
-  margin-bottom: -25px;
-}
-.disp {
-  margin-bottom: -25px;
-}
+  .disp {
+    margin-bottom: -25px;
+  }
 }
 /* FIN Contact --------------------------------------------------------------------*/
 
