@@ -776,6 +776,13 @@ input {
     margin: 2px 3px;
     width: 67px;
   }
+
+.masque {
+  margin-bottom: -25px;
+}
+.disp {
+  margin-bottom: -25px;
+}
 }
 /* FIN Contact --------------------------------------------------------------------*/
 
