@@ -518,9 +518,18 @@
           <fieldset>
             <legend>Votre message</legend>
             <div id="message">
-              <textarea name="message" placeholder="Saisissez votre message"
-                        rows="6" value="Saisissez votre message" required="required">
-              </textarea>
+              <label for="object"><p>Objet :</p></label>
+              <input  id="object" type="text" name="objet" 
+                      placeholder="Saisissez l'objet de votre message" required="required">
+
+              <label><p>Message :</p></label>
+              <textarea name="message" placeholder="Saisissez votre message
+
+
+
+(vous pouvez étirer la zone de texte si besoin en la saisissant en bas à droite)"
+                        rows="6" required="required"></textarea>
+
               <button>
                 <input type="submit" value="Envoyer">
               </button>
