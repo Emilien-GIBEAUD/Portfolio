@@ -11,8 +11,8 @@ formulaire.getElement("prof").addEventListener("change", ()=>{formulaire.showCha
 
 // addEventListener pour récupérer les données du formulaire
 formulaire.formulaireHtml.addEventListener("submit",
-  (envent) => {
-    envent.preventDefault();
+  (event) => {
+    event.preventDefault();
     formulaire.affAnswers();
-   }
+  }
 )
