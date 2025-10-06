@@ -689,9 +689,8 @@ legend {
   width: 100%;
 }
 
-#message button {
+#Contact button {
   align-self: center;
-  padding-right: 4px;   /* bouton décentré sinon, BUG ??? */
 }
 
 #message textarea {

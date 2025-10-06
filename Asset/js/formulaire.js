@@ -37,13 +37,23 @@ export default class Formulaire {
     this.getElement(id).required = false;
   }
 
+  // Méthode pour nettoyer les données saisies
+  cleanHTML(unsafe){
+    return unsafe 
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
   // Méthode pour récupérer les éléments de chaque input (et les ajouter à answer)
   getAnswers() {
     this.formdata = new FormData(this.formulaireHtml);
     this.formdata.forEach(
       (value, key) => {
         if(value != "" && value !="on"){
-          this.answers.push([key, value]);
+          this.answers.push([key, this.cleanHTML(value)]);
         }
       }
     )
