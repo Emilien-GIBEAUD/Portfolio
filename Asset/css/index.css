@@ -10,7 +10,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   display: flex;
   flex-direction: column;
@@ -21,18 +20,15 @@ body {
   background-repeat: repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 main {
   background-color: rgba(245, 245, 245, 0.7);
   max-width: 1024px;
   border-radius: 10px;
-  /* padding: 0px 5px; */
 }
-
 section {
   padding: 16px 8px;
+  scroll-margin-top: 62px;
 }
-
 h1 {
   margin: auto;
   background-color: rgba(245, 245, 245, 0.90);
@@ -44,6 +40,15 @@ h1 {
   font-size: 3rem;
   color: rgb(50, 50, 50);
 }
+h2 {
+  width: fit-content;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  background-color: rgba(245, 245, 245, 0.95);
+  padding: 0.3rem;
+  border: solid thin rgb(220 220 220);
+  border-radius: 5px;
+}
 
 a:link, a:visited, a:hover {
   color: blue;
@@ -52,21 +57,26 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Pour décaler les cibles sous la nav */
-/* A REPOSITIONNER SI BESOIN*/
-/* BUG A CORRIGER : mange le padding des sections au click*/
-:target {
-  padding-top: 62px;
-  margin-top: -62px;
-}
-
-@media (max-width: 740px) {
+@media (max-width: 600px) {
   section {
     padding: 8px 3px;
+    scroll-margin-top: 38px;
   }
-
   main{
     padding: 0px 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.25rem;
+    margin-left: 30px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 479px) {
+  h2 {
+    font-size: 1rem;
   }
 }
 /* FIN partie générale */
@@ -74,10 +84,8 @@ a:hover {
 /* DEBUT header (avec logos, nav bar et bouton contact) et footer ---------------*/
 header, footer {
   display: flex;
-  /* position: -webkit-sticky; */
   position: sticky;
   width: 100%;
-  padding: 2px 0px;
   z-index: 2;
   background-color: rgba(225, 235, 240,0.98);
 }
@@ -86,13 +94,14 @@ header {
   gap: 0.5rem;
   justify-content: center;
   top: 0px;
+  padding: 2px 0px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 footer {
   justify-content: start;
-  padding-left: 20px;
   bottom: 0px;
+  padding: 5px 0 5px 20px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   font-size: small;
@@ -102,7 +111,6 @@ nav {
   display: flex;
   gap: 0.5rem;
 }
-
 .logo {
   display: flex;
   justify-content: center;
@@ -113,15 +121,12 @@ nav {
   border: solid thin grey;
   background-color: rgba(225, 235, 240);
 }
-
 .icon_size_logo {
   height : 45px;
 }
-
 #menu_toogle, #toggle {
   display: none;
 }
-
 .menu {
   display: flex;
   justify-content: space-around;
@@ -129,56 +134,30 @@ nav {
   border: solid thin grey;
   background-color: rgba(225, 235, 240);
 }
-
-.menu_button_border{
+.menu_button{
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 0.5rem;
+}
+.menu_button_border_r_or_b{
   border-right: solid thin grey;
 }
-
-.button {     /* BOUTON de Contact */
-  display: flex;    /* UTILE ??? */
-  flex-direction: column;
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
-  background: linear-gradient(rgb(180,180,180), rgb(180,180,180));
-  padding: 2px 6px;
-}
-
-/* Animation du BOUTON de Contact */
-/* .contact_button:hover {     
-  background: linear-gradient(rgba(180,180,180,0.75),rgba(180,180,180,1),
-  rgba(180,180,180,0.75));
-  border: solid rgb(160,160,160);
-} */
-
-.icon_contact_button {
-  height: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -2px;
-}
-
 .small_screen {
   display: none;
 }
-
 .large_screen {
   display: block;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 600px) {
   header {
     justify-content: space-between;
     gap: 0;
   }
-
   .icon_size_logo {
     height : 30px;
   }
-  
   .menu {
     display: none;
     flex-direction: column;
@@ -188,7 +167,6 @@ nav {
     border: solid thin grey;
     background-color: rgba(225, 235, 240);
   }
-  
   .icon_contact_button {
     display: none;
   }
@@ -197,19 +175,19 @@ nav {
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
   }
-  .menu_button_border{
-    border-right-style: none;
-    border-bottom: solid thin grey;
+  .menu_button{
     padding: 2px 5px;
   }
-  
+  .menu_button_border_r_or_b{
+    border-right: none;
+    border-bottom: solid thin grey;
+  }
   .small_screen{
     display: block;
   }
   .large_screen {
     display: none;
   }
-  
   #menu_toogle{
     display: flex;
     justify-content: center;
@@ -217,16 +195,14 @@ nav {
     font-size: 1.15rem;
     cursor: pointer;
   }
-
   #toggle:checked + .menu {
     display: flex;
   }
 
-/* Pas terrible, Menu burger à faire avec du JS à terme*/
+/* Pas terrible, Menu burger à faire avec du JS à terme, or not !!!*/
   #toggle:checked + .logo {
     flex-direction: column;
   }
-
 /* Tooltip text */
 .tooltip .tooltip_txt {
   visibility: hidden;
@@ -237,12 +213,10 @@ nav {
   margin: -2px 5px;
   border-radius: 5px;
   border: solid thin;
-
   /* Position the tooltip text*/
   position: static;
   z-index: 1;
 }
-
 /* Show the tooltip text when you mouse over the tooltip container */
   .tooltip:hover .tooltip_txt {
     visibility: visible;
@@ -253,20 +227,17 @@ nav {
   .logo {
     display: none;
   }
-
   header {
     justify-content: end;
+  }
+  section {
+    scroll-margin-top: 37px;
   }
 }
 /* FIN header (avec logos, nav bar et bouton contact) ----------------------------*/
 
 /* DEBUT Présentation ------------------------------------------------------------*/
 #Presentation {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* justify-content: space-between;
-  flex-flow: row wrap; */
   background-image: url("../img/Saint_Simind_origine.webp");
   background-size: cover;
   background-position: center;
@@ -274,24 +245,23 @@ nav {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
-
+.prez_link_mx {
+  padding: 3px 0;
+}
 #info_presentation {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
 }
-
 .white_bg {
   background-color: rgba(245, 245, 245, 0.95);
   border-radius: 10px;
   padding: 8px;
   margin: 8px;
 }
-
 .logo_linkedin{
   height: 0.85rem;
 }
-
 .for_photo_id {
   height: 20px;
 }
@@ -309,7 +279,6 @@ nav {
   transform: rotate(360deg);
   opacity: 0;
 }
-
 #txt_presentation {
   display: flex;
   justify-content: center;
@@ -324,11 +293,9 @@ nav {
   #Presentation {
     font-size: small;
   }
-
   h1 {
     font-size: 1.6rem;
   }
-
   #photo_id {
     width: 53px;
     top: 0px;
@@ -339,7 +306,6 @@ nav {
     padding: 4px;
     margin: 2px;
   }
-  
   #txt_presentation {
     width: 400px;
   }
@@ -349,46 +315,13 @@ nav {
   #txt_presentation {
     width: 90%;
   }
-
   h1 {
-    /* font-size: 1.25rem; */
     order: 1;
   }
 }
-
-/* @media (max-width: 460px) {
-  h1 {
-    order: 1;
-  }
-} */
-
 /* FIN Présentation --------------------------------------------------------------*/
 
-h2 {
-  width: fit-content;
-  margin-left: 60px;
-  margin-bottom: 10px;
-  background-color: rgba(245, 245, 245, 0.95);
-  padding: 0.3rem;
-  border: solid thin rgb(220 220 220);
-  border-radius: 5px;
-}
-
-@media (max-width: 740px) {
-  h2 {
-    font-size: 1.25rem;
-    margin-left: 30px;
-    margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 479px) {
-  h2 {
-    font-size: 1rem;
-  }
-}
-
-/* Generic bloc & box ------------------------------------------------------------------*/
+/* DEBUT Generic bloc & box ------------------------------------------------------------------*/
 .box{
   border-style: solid;
   border-width: thin;
@@ -399,7 +332,6 @@ h2 {
 .box_ongoing{
   border-style: dashed;
 }
-
 .bloc{
   display: flex;
   flex-wrap: wrap;
@@ -407,7 +339,7 @@ h2 {
   align-items: center;
   gap: 10px 15px;
 }
-
+/* FIN Generic bloc & box ------------------------------------------------------------------*/
 
 /* DEBUT Diplômes ------------------------------------------------------------------*/
 .diplome_box{
@@ -419,21 +351,20 @@ h2 {
   height: 110px;
   padding: 0px 20px;
 }
-
 .studi{
   flex-flow: row wrap;
   column-gap: 30px;
 }
-
+.logo_studi{
+  width: 60px;
+}
 .poitiers{
   gap: 10px 30px;
 }
-
 .angers{
   gap: 10px;
   padding: 0px 10px;
 }
-
 .logo_angers{
   height: 75px;
 }
@@ -446,7 +377,35 @@ h2 {
 }
 /* FIN Diplômes ----------------------------------------------------------------*/
 
-/* DEBUT Expériences Dev ---------------------------------------------------------*/
+/* DEBUT Compétences Dev ---------------------------------------------------------*/
+.exp_dev_proj_box{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+}
+.exp_dev_proj_box_title{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+}
+.exp_dev_proj_box_txt{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3px 30px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-top: solid thin grey;
+  width: 100%;
+  height: 100%;
+}
+
 .exp_dev_box{
   display: flex;
   flex-flow: column wrap;
@@ -455,7 +414,6 @@ h2 {
   width: 200px;
   height: 100px;
 }
-
 .exp_dev_box_title{
   display: flex;
   justify-content: center;
@@ -463,15 +421,15 @@ h2 {
   width: 84px;
   height: 29px;
 }
-
 .exp_dev_logo{
   display: flex;
+  flex-direction: column;
+  gap: 6px;
   justify-content: center;
   align-items: center;
   width: 84px;
   height: 69px;
 }
-
 .logo_techno{
   width: 50px;
 }
@@ -487,24 +445,40 @@ h2 {
 .logo_symphony{
   width: 65px;
 }
-
+.logo_git{
+  width: 45px;
+}
+.logo_github{
+  width: 30px;
+}
 .exp_dev_box_txt{
   display: flex;
+  flex-flow: row wrap;
+  gap: 3px 30px;
   justify-content: center;
   align-items: center;
+  align-content: center;
   border-left: solid thin grey;
   width: 114px;
   height: 99px;
 }
 
 @media (max-width: 479px) {
+  .exp_dev_proj_box{
+    font-size: small;
+    width: 250px;
+  }
+  .exp_dev_proj_box_txt{
+    gap: 8px 30px;
+  }
+}
+@media (max-width: 479px) {
   .exp_dev_box{
     font-size: small;
   }
   
 }
-
-/* FIN Expériences Dev ---------------------------------------------------------*/
+/* FIN Compétences Dev ---------------------------------------------------------*/
 
 /* DEBUT Expériences Meca --------------------------------------------------------*/
 #Exp_meca{
@@ -515,12 +489,10 @@ h2 {
   padding: 0;
   margin: 3px 0;
 }
-
 .filtre{
   background-color: rgba(235, 235, 235, 0.7);
   padding: 16px 8px;
 }
-
 .exp_meca_box{
   display: flex;
   flex-flow: row wrap;
@@ -529,7 +501,6 @@ h2 {
   width: 450px;
   height: 120px;
 }
-
 .exp_meca_box_date{
   display: flex;
   justify-content: center;
@@ -539,7 +510,6 @@ h2 {
   width: 71px;
   height: 49px;
 }
-
 .exp_meca_box_title{
   display: flex;
   justify-content: center;
@@ -548,7 +518,6 @@ h2 {
   width: 377px;
   height: 49px;
 }
-
 .exp_meca_box_txt{
   display: flex;
   justify-content: center;
@@ -556,7 +525,6 @@ h2 {
   width: 329px;
   height: 70px;
 }
-
 .exp_meca_logo{
   display: flex;
   flex-flow: row wrap;
@@ -565,7 +533,6 @@ h2 {
   width: 119px;
   height: 70px;
 }
-
 .exp_meca_box_txt_efinor{
   display: flex;
   justify-content: center;
@@ -589,7 +556,6 @@ h2 {
   height: 20px;
   font-size: small;
 }
-
 .logo_company{
   height: 30px;
 }
@@ -618,36 +584,30 @@ h2 {
   height: 40px;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 600px) {
   .filtre {
     padding: 8px 3px;
   }
 }
-
 @media (max-width: 479px) {
   .exp_meca_box{
     width: 310px;
   }
-  
   .exp_meca_box_date{
     width: 51px;
     font-size: small;
   }
-  
   .exp_meca_box_title{
     width: 257px;
     font-size: small;
   }
-  
   .exp_meca_box_txt{
     width: 189px;
     font-size: small;
   }
-  
   .exp_meca_logo{
     width: 119px;
   }
-
   .exp_meca_box_txt_efinor{
     width: 189px;
     height: 50px;
@@ -663,165 +623,29 @@ h2 {
     font-size: xx-small;
   }
 }
-
 /* FIN Expériences Meca --------------------------------------------------------*/
-
-
-/* DEBUT Contact ------------------------------------------------------------------*/
-fieldset {
-  padding: 10px;
-  border: solid 2px rgb(1, 78, 121);
-  border-radius: 10px;
-}
-
-legend {
-  padding: 5px;
-  font-size: 1.4rem;
-}
-
-#message {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-#message input {
-  width: 100%;
-}
-
-#Contact button {
-  align-self: center;
-}
-
-#message textarea {
-  width: 100%;
-  resize: vertical;
-  margin-bottom: 5px;
-  padding: 2px 4px;
-  border: solid 1px rgb(1, 78, 121);
-  border-radius: 4px;
-}
-
-#message input:hover {
-  background-color: rgb(100, 149, 237, 0.5);
-  font-weight: bold;
-  transition-duration: 0.5s;
-}
-
-#message input {
-  margin: 2px 2px;
-  padding: 2px 4px;
-}
-
-.contact_items {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contact_items p,#status_choice p {
-  margin: 2px 10px;
-  width: 85px;
-  text-align: right;
-}
-
-input {
-  margin: 2px 0px;
-  padding: 1px 2px;
-  flex-grow: 1;
-  border: solid 1px rgb(1, 78, 121);
-  border-radius: 4px;
-}
-
-#status_choice {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Classes d'animations pour JS */
-.masque {
-  opacity: 0%;
-  margin-bottom: -30px; /* -4% */
-}
-.app {
-  opacity: 100%;
-  transition-duration: 0.5s;
-  margin-bottom: 0%;
-}
-.disp {
-  opacity: 0%;
-  transition-duration: 0.5s;
-  margin-bottom: -30px; /* -4% */
-}
-
-@media (max-width: 479px) {
-  #Contact {
-    font-size: small;
-  }
-  
-  #Contact legend {
-    font-size: 1rem;
-  }
-
-  fieldset {
-    padding: 3px;
-  }
-
-  .contact_items p,#status_choice p {
-    margin: 2px 3px;
-    width: 67px;
-  }
-
-  .masque {
-    margin-bottom: -25px;
-  }
-  .app {
-    margin-bottom: 0%;
-  }
-    .disp {
-    margin-bottom: -25px;
-  }
-}
-/* FIN Contact --------------------------------------------------------------------*/
 
 .center_txt {
   text-align: center;
 }
-
 .right_txt {
   text-align: right;
 }
-
 .italic {
   font-style: italic;
 }
-
 .bold {
   font-weight: bold;
 }
-
 .underline {
   text-decoration: underline;
 }
-
 .small_txt{
-  font-size: small;
+  font-size: 14px;
 }
-
-/* .arrow::before {
-  content: "➳";
-  position: inherit;
+@media (max-width: 479px) {
+  .small_txt{
+    font-size: 12px;
+  }
 }
-
-.disc {
-  list-style-type: disc;
-}
-
-.circle {
-  list-style-type: circle;
-} */
-
 /*_________________________________________100_caractères_________________________________________*/

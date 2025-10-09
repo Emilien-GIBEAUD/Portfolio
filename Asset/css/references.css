@@ -65,7 +65,6 @@ p {
 
 @media (max-width: 410px) {
   header, footer {
-    /* height: 25px; */
     font-size: smaller;
   }
     h1 {
@@ -148,6 +147,5 @@ a:hover {
 }
 
 .img_size {
-  /* width: 970px; */
   width: 100%;
 }
