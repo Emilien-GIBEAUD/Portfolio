@@ -354,6 +354,7 @@ nav {
 .studi{
   flex-flow: row wrap;
   column-gap: 30px;
+  padding: 0px 8px;
 }
 .logo_studi{
   width: 60px;
@@ -388,7 +389,7 @@ nav {
 }
 .exp_dev_proj_box_title{
   display: flex;
-  gap: 10px;
+  gap: 5px;
   justify-content: center;
   align-items: center;
   width: 100%;
