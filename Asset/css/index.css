@@ -329,9 +329,6 @@ nav {
   border-radius: 20px;
   background-color: rgba(245, 245, 245, 0.90);
 }
-.box_ongoing{
-  border-style: dashed;
-}
 .bloc{
   display: flex;
   flex-wrap: wrap;
@@ -353,7 +350,7 @@ nav {
 }
 .studi{
   flex-flow: row wrap;
-  column-gap: 30px;
+  column-gap: 45px;
   padding: 0px 8px;
 }
 .logo_studi{
