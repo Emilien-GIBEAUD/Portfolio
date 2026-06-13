@@ -1,0 +1,15 @@
+# Pour déployer la page de test sur un VPS (au push sur la branch "test").
+# Copier ce fichier dans le dossier du VPS.
+# Lancer la commande : docker-compose up -d
+services:
+  front:
+    image: emiliengibeaud/portfolio_test:latest
+    container_name: portfolio
+    restart: unless-stopped
+    networks:
+      - edge
+
+networks:
+  edge:
+    external: true
+    name: edge_edge
