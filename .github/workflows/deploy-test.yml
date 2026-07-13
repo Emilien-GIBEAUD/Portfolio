@@ -31,7 +31,8 @@ jobs:
         context: .
         push: true
         tags: emiliengibeaud/portfolio_test:latest
-        platforms: linux/amd64,linux/arm64
+        platforms: linux/arm64
+        # platforms: linux/amd64,linux/arm64
 
   deploy:
     needs: build
