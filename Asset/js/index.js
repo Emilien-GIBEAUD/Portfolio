@@ -1,18 +1,26 @@
-const modal = document.querySelector(".modal_display");
-const imgClicked = document.querySelector(".modal");
+const projectmodals = document.querySelectorAll(".exp_dev_proj_box_img");
 
-imgClicked.addEventListener("click", () => {
-    displayModal();
+projectmodals.forEach(modalBox => {
+    const modal = modalBox.querySelector(".modal_display");
+    const imgClicked = modalBox.querySelector(".modal");
+    const closeBtn = modal.querySelector(".modal_close");
+
+    imgClicked.addEventListener("click",() => {
+        modal.classList.remove("modal_hidden");
+        document.body.classList.add('no-scroll');
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.classList.add("modal_hidden");
+        document.body.classList.remove('no-scroll');
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.add("modal_hidden");
+            document.body.classList.remove('no-scroll');
+        }
+    });
+
 });
 
-function displayModal(){
-    modal.classList.toggle("modal_hidden");
-    const closeBtn = modal.querySelector(".modal_close");
-    closeBtn.addEventListener("click", hideModal);
-    document.body.classList.toggle('no-scroll');
-}
-
-function hideModal(){
-    modal.classList.toggle("modal_hidden");
-    document.body.classList.toggle('no-scroll');
-}
