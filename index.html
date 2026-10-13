@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Emilien GIBEAUD">
-  <meta name="description" content="Cette page contient mon portfolio (actualisé en octobre 2025).">
+  <meta name="description" content="Cette page contient mon portfolio (actualisé en octobre 2026).">
   <link rel="preload" href="./Asset/img/Saint_Simind_origine.webp" as="image">
   <link rel="preload" href="./Asset/img/kevin-canlas_2000Xxxx.webp" as="image">
   <link rel="preload" href="./Asset/img/ricardo-gomez-angel_2000Xxxx.webp" as="image">
-    <link rel="stylesheet" href="./Asset/css/index.css">
+  <link rel="stylesheet" href="./Asset/css/index.css">
   <link rel="shortcut icon" href="./Asset/icon/code.svg" type="image/x-icon">
+  <script defer type="module" src="./Asset/js/index.js"></script>
   <title>Portfolio Emilien GIBEAUD</title>
 </head>
 
@@ -92,9 +93,20 @@
     <section id="Diplomes">
       <h2>Diplômes</h2>
       <div class="bloc">
+        <div class="box box_ongoing diplome_box eni">
+          <p class="center_txt italic bold">oct. 2026 à avr. 2027</p>
+          <p class="center_txt">
+            Titre Professionnel<br>
+            Concepteur Développeur<br>
+            d'Applications - ENI<br>
+          </p>
+          <img class="logo_eni" src="./Asset/icon/univ/ENI.jpg" alt="Logo de ENI École Informatique">
+          <p class="center_txt small_txt">(RNCP niv. 6)</p>
+        </div>    
         <div class="box diplome_box studi">
           <p class="center_txt bold">2025</p>
           <img class="logo_studi" src="./Asset/icon/univ/Studi.svg" alt="Logo Studi">
+          <p class="center_txt small_txt">(RNCP niv. 5)</p>
           <p class="center_txt">
             Titre Professionnel Développeur<br>
             Web et Web Mobile - Studi<br>
@@ -135,7 +147,41 @@
 
         <div class="box exp_dev_proj_box">
           <div class="exp_dev_proj_box_title">
+            <a href="https://www.restaurantauborddeleau.com/" target="_blank">Restaurant Au Bord de l'Eau</a>
+          </div>
+          <div class="exp_dev_proj_box_img">
+            <img class="logo_projet modal" src="./Asset/icon/exp_dev/abdle.png" alt="Image d'aperçu du site du Restaurant Au Bord de l'Eau">
+            <div class="modal_display modal_hidden">
+              <div class="modal_actions">
+                <div class="actions">
+                  <a class="modal_close">&#10005</a>
+                </div>
+                <img id="modal" src="./Asset/icon/exp_dev/abdle.png" alt="Image d'aperçu du site du Restaurant Au Bord de l'Eau">
+              </div>
+            </div>
+          </div>
+          <div class="exp_dev_proj_box_txt">
+            <p>Site vitrine de restaurant</p>
+            <p>HTML/SCSS/JS<br></p>
+            <p class="italic">(Site d'un restaurant professionnel)</p>
+          </div>
+        </div>
+
+        <div class="box exp_dev_proj_box">
+          <div class="exp_dev_proj_box_title">
             <a href="https://er.petitmaraichin.fr" target="_blank">EcoRide</a>
+            <span class="italic">(TP DWWM)</span>
+          </div>
+          <div class="exp_dev_proj_box_img">
+            <img class="logo_projet modal" src="./Asset/icon/exp_dev/ecoride.png" alt="Image d'aperçu de Ecoride">
+            <div class="modal_display modal_hidden">
+              <div class="modal_actions">
+                <div class="actions">
+                  <a class="modal_close">&#10005</a>
+                </div>
+                <img id="modal" src="./Asset/icon/exp_dev/ecoride.png" alt="Image d'aperçu de Ecoride">
+              </div>
+            </div>
           </div>
           <div class="exp_dev_proj_box_txt">
             <p>Application web de covoiturage</p>
@@ -148,6 +194,18 @@
         <div class="box exp_dev_proj_box">
           <div class="exp_dev_proj_box_title">
             <a href="https://emilien-gibeaud.github.io/Memory-Game/" target="_blank">Memory-Game</a>
+            <span class="italic">(TP DWWM)</span>
+          </div>
+          <div class="exp_dev_proj_box_img">
+            <img class="logo_projet modal" src="./Asset/icon/exp_dev/memory-game.png" alt="Image d'aperçu de Memory-Game">
+            <div class="modal_display modal_hidden">
+              <div class="modal_actions">
+                <div class="actions">
+                  <a class="modal_close">&#10005</a>
+                </div>
+                <img id="modal" src="./Asset/icon/exp_dev/memory-game.png" alt="Image d'aperçu de Memory-Game">
+              </div>
+            </div>
           </div>
           <div class="exp_dev_proj_box_txt">
             <p>Jeu de mémoire ludique</p>
@@ -157,17 +215,19 @@
 
         <div class="box exp_dev_proj_box">
           <div class="exp_dev_proj_box_title">
-            <a href="https://www.restaurantauborddeleau.com/" target="_blank">Restaurant Au Bord de l'Eau</a>
-          </div>
-          <div class="exp_dev_proj_box_txt">
-            <p>Site vitrine de restaurant</p>
-            <p>HTML/SCSS/JS</p>
-          </div>
-        </div>
-
-        <div class="box exp_dev_proj_box">
-          <div class="exp_dev_proj_box_title">
             <a href="https://moviz.petitmaraichin.fr/" target="_blank">Moviz</a>
+            <span class="italic">(TP DWWM)</span>
+          </div>
+          <div class="exp_dev_proj_box_img">
+            <img class="logo_projet modal" src="./Asset/icon/exp_dev/moviz.png" alt="Image d'aperçu de Moviz">
+            <div class="modal_display modal_hidden">
+              <div class="modal_actions">
+                <div class="actions">
+                  <a class="modal_close">&#10005</a>
+                </div>
+                <img id="modal" src="./Asset/icon/exp_dev/moviz.png" alt="Image d'aperçu de Moviz">
+              </div>
+            </div>
           </div>
           <div class="exp_dev_proj_box_txt">
             <p>Site de critiques de films</p>
@@ -286,6 +346,30 @@
           </div>
         </div>
 
+        <div class="box exp_dev_box">   <!-- Odoo -->
+          <div class="exp_dev_box_title"><p class="bold">Odoo</p></div>
+          <div class="exp_dev_logo"><img  class="logo_odoo" 
+                                          src="./Asset/icon/exp_dev/Odoo.png" 
+                                          alt="Logo de Odoo">
+          </div>
+          <div class="exp_dev_box_txt">
+            <p class="center_txt">Pratique autodidacte</p>
+            <p class="center_txt italic">(2026)</p>
+          </div>
+        </div>
+
+        <div class="box exp_dev_box">   <!-- Python -->
+          <div class="exp_dev_box_title"><p class="bold">Python</p></div>
+          <div class="exp_dev_logo"><img  class="logo_techno" 
+                                          src="./Asset/icon/exp_dev/python.svg" 
+                                          alt="Logo de Python">
+          </div>
+          <div class="exp_dev_box_txt">
+            <p class="center_txt">Pratique autodidacte</p>
+            <p class="center_txt italic">(2026)</p>
+          </div>
+        </div>
+
         <div class="box exp_dev_box">   <!-- Java -->
           <div class="exp_dev_box_title"><p class="bold">Java</p></div>
           <div class="exp_dev_logo"><img  class="logo_java" 
@@ -294,7 +378,7 @@
           </div>
           <div class="exp_dev_box_txt">
             <p class="center_txt">Pratique autodidacte</p>
-            <p class="center_txt italic">(avant le TP)</p>
+            <p class="center_txt italic">(2024)</p>
           </div>
         </div>
 
