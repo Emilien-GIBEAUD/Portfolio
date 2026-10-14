@@ -248,7 +248,7 @@ nav {
 .icon_size_logo {
   height : 45px;
 }
-#menu_toogle, #toggle {
+#menu_toggle, #toggle {
   display: none;
 }
 .menu {
@@ -312,7 +312,7 @@ nav {
   .large_screen {
     display: none;
   }
-  #menu_toogle{
+  #menu_toggle{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -639,6 +639,9 @@ nav {
 .logo_techno{
   width: 50px;
 }
+.logo_devops{
+  width: 130px;
+}
 .logo_odoo{
   width: 70px;
 }
@@ -651,7 +654,7 @@ nav {
 .logo_php{
   width: 70px;
 }
-.logo_symphony{
+.logo_symfony{
   width: 65px;
 }
 .logo_git{
@@ -662,8 +665,8 @@ nav {
 }
 .exp_dev_box_txt{
   display: flex;
-  flex-flow: row wrap;
-  gap: 3px 30px;
+  flex-flow: column;
+  gap: 3px 8px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -671,6 +674,15 @@ nav {
   width: 114px;
   height: 99px;
 }
+.box_txt_devops{
+  flex-flow: row wrap;
+}
+@media (max-width: 479px) {
+  .box_txt_devops{
+    gap: 3px 10px;
+  }
+}
+
 /* FIN Compétences Dev ---------------------------------------------------------*/
 
 
