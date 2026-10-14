@@ -576,6 +576,9 @@ nav {
   width: 65px;
   }
 @media (max-width: 479px) {
+  .logo_projet_w_align{
+    width: 55px;
+    }
   .logo_ecoride{
     height: auto;
     width: 55px;
