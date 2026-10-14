@@ -61,6 +61,15 @@ h2 {
   border: solid thin rgb(220 220 220);
   border-radius: 5px;
 }
+h3 {
+  width: fit-content;
+  margin-left: 80px;
+  margin-bottom: 10px;
+  background-color: rgba(245, 245, 245, 0.95);
+  padding: 0.3rem;
+  border: solid thin rgb(220 220 220);
+  border-radius: 5px;
+}
 
 a:link, a:visited, a:hover {
   color: blue;
@@ -85,10 +94,18 @@ a:hover {
     margin-left: 30px;
     margin-bottom: 5px;
   }
+  h3 {
+    font-size: 0.98rem;
+    margin-left: 50px;
+    margin-bottom: 5px;
+  }
 }
 @media (max-width: 479px) {
   h2 {
     font-size: 1rem;
+  }
+  h3 {
+    font-size: 0.78rem;
   }
 }
 
@@ -174,8 +191,14 @@ a:hover {
 .small_txt{
   font-size: 14px;
 }
+.smaller_txt{
+  font-size: 13px;
+}
 @media (max-width: 479px) {
   .small_txt{
+    font-size: 12px;
+  }
+  .smaller_txt{
     font-size: 12px;
   }
 }
@@ -442,6 +465,10 @@ nav {
   align-items: center;
   gap: 10px 15px;
 }
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
 /* FIN Generic bloc & box ------------------------------------------------------------------*/
 
 
@@ -498,6 +525,12 @@ nav {
   width: 300px;
   height: 100px;
 }
+@media (max-width: 479px) {
+  .exp_dev_proj_box{
+    font-size: small;
+    width: 250px;
+  }
+}
 .exp_dev_proj_box_title{
   display: flex;
   gap: 5px;
@@ -525,17 +558,41 @@ nav {
   width: 77%;
   height: 72%;
 }
+@media (max-width: 479px) {
+  .exp_dev_proj_box_txt{
+    gap: 8px 30px;
+  }
+}
 .exp_dev_proj_box_txt_list{
   width: 100%;
+      padding: 0 5px;
 }
-.btn_img{
-  padding: 0;
-  border: none;
-  background: none;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
+.logo_projet{
+  height: 65px;
+  border-radius: 10px;
 }
+.logo_projet_w_align{
+  height: auto;
+  width: 65px;
+  }
+@media (max-width: 479px) {
+  .logo_ecoride{
+    height: auto;
+    width: 55px;
+  }
+  .logo_moviz{
+    height: auto;
+    width: 55px;
+  }
+}
+
+.Exp_dev_hr{
+  width: 90%;
+  margin: 20px auto;
+  border: solid thin rgb(220 220 220);
+  border-radius: 5px;
+}
+
 .exp_dev_box{
   display: flex;
   flex-flow: column wrap;
@@ -544,12 +601,28 @@ nav {
   width: 200px;
   height: 100px;
 }
+@media (max-width: 479px) {
+  .exp_dev_box{
+    font-size: small;
+  }
+}
 .exp_dev_box_title{
   display: flex;
   justify-content: center;
   align-items: end;
   width: 84px;
   height: 29px;
+}
+.box_title_sql{
+  flex-flow: row wrap;
+  align-content: end;
+  gap: 3px;
+  height: 59px;
+}
+@media (max-width: 479px) {
+  .box_title_sql{
+    gap: 5px;
+  }
 }
 .exp_dev_logo{
   display: flex;
@@ -560,14 +633,9 @@ nav {
   width: 84px;
   height: 69px;
 }
-.logo_projet{
-  height: 65px;
-  border-radius: 10px;
+.dev_logo_sql{
+  height: 39px;
 }
-.logo_moviz{
-  height: auto;
-  width: 65px;
-  }
 .logo_techno{
   width: 50px;
 }
@@ -602,27 +670,6 @@ nav {
   border-left: solid thin grey;
   width: 114px;
   height: 99px;
-}
-
-@media (max-width: 479px) {
-  .exp_dev_proj_box{
-    font-size: small;
-    width: 250px;
-  }
-  .exp_dev_proj_box_txt{
-    gap: 8px 30px;
-  }
-  .exp_dev_box{
-    font-size: small;
-  }
-  .logo_ecoride{
-    height: auto;
-    width: 55px;
-  }
-  .logo_moviz{
-    height: auto;
-    width: 55px;
-  }
 }
 /* FIN Compétences Dev ---------------------------------------------------------*/
 
