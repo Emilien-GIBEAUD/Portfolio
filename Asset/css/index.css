@@ -152,7 +152,10 @@ a:hover {
   width: auto;
   height: auto;
 }
-@media (max-height: 500px) and (orientation: landscape) {
+@media (max-height: 550px) and (orientation: landscape) {
+  .modal_display {
+    align-items: flex-start;
+  }
   .modal_actions {
     max-height: 90%;
   }
